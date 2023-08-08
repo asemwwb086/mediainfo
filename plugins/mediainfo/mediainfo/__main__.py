@@ -67,7 +67,7 @@ async def mediainfo(message: Message):
             out = output_[0]
         else:
             ext = url_[-3:]
-            output_ = await runcmd(f'curl --silent {useurl_} | head --bytes 10M > temp.{ext} && mediainfo temp.{ext}')
+            output_ = await runcmd(f'curl --silent {url_} | head --bytes 10M > temp.{ext} && mediainfo temp.{ext}')
             out = output_[0]
         body_text = f"""
     <h2>DETAILS</h2>
