@@ -50,10 +50,10 @@ def safe_filename(path_):
     return safename
 
 
-@userge.on_cmd("minfo", about={
+@userge.on_cmd("mi", about={
     'header': "Get Detailed Media Info by Replying or Link or File Path",
-    'usage': "{tr}minfo [url/File Path | reply to Media file]",
-    'examples': "{tr}minfo https://index.com/file.mkv"})
+    'usage': "{tr}mi [url/File Path | reply to Media file]",
+    'examples': "{tr}mi https://index.com/file.mkv"})
 async def mediainfo(message: Message):
     """Get Media Info"""
     reply = message.reply_to_message
